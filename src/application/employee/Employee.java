@@ -1,11 +1,15 @@
 package application.employee;
 
-public class Employee {
+import java.io.Serializable;
+
+public class Employee implements Serializable {
     private String employeeCode;
     private String employeeName;
     private String employeeAddress;
     private String employeeIDNumber;
     private String accessType;
+    private String userName;
+    private String password;
     private boolean status;
 
     public Employee(String employeeCode, String employeeName, String employeeAddress, String employeeIDNumber, String accessType, boolean status) {
@@ -61,7 +65,38 @@ public class Employee {
         return status;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    private void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    private String getPassword() {
+        return password;
+    }
+
+    private void setPassword(String password) {
+        this.password = password;
+    }
+    public boolean changePassword(String userName, String password,String newPassword) {
+        if (getAuthority(userName, password)){
+            setPassword(newPassword);
+            return true;
+        }
+        return false;
+    }
+
     public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    public boolean getAuthority(String username, String password) {
+        boolean authorized = false;
+        if (username.equals(getUserName()) && password.equals(getPassword())) {
+            authorized = true;
+        }
+        return authorized;
     }
 }
