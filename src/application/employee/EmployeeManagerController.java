@@ -69,6 +69,7 @@ public class EmployeeManagerController implements Initializable {
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
+
         codeColumn.setCellValueFactory(new PropertyValueFactory<Employee, String>("employeeCode"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<Employee, String>("employeeName"));
         idnumberColumn.setCellValueFactory(new PropertyValueFactory<Employee, String>("employeeIDNumber"));
