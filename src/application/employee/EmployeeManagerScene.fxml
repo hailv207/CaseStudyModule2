@@ -29,15 +29,15 @@
       </MenuBar>
    </top>
    <center>
-      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="employeeTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="102.0" text="Employee code" />
-          <TableColumn prefWidth="233.0" text="Full name" />
-            <TableColumn prefWidth="134.0" text="ID number" />
-            <TableColumn prefWidth="100.0" text="Birthday" />
-            <TableColumn prefWidth="336.0" text="Adress" />
-            <TableColumn prefWidth="112.0" text="Access type" />
-            <TableColumn minWidth="9.0" prefWidth="111.0" text="Status" />
+          <TableColumn fx:id="codeColumn" prefWidth="102.0" text="Employee code" />
+          <TableColumn fx:id="nameColumn" prefWidth="233.0" text="Full name" />
+            <TableColumn fx:id="idnumberColumn" prefWidth="134.0" text="ID number" />
+            <TableColumn fx:id="birthdayColumn" prefWidth="100.0" text="Birthday" />
+            <TableColumn fx:id="addressColumn" prefWidth="336.0" text="Adress" />
+            <TableColumn fx:id="accessTypeColumn" prefWidth="112.0" text="Access type" />
+            <TableColumn fx:id="statusColumn" minWidth="9.0" prefWidth="111.0" text="Status" />
         </columns>
       </TableView>
    </center>
